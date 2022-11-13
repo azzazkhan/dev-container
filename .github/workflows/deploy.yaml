@@ -29,4 +29,4 @@ jobs:
 
             # Push the built image to Docker Hub container registry
             - name: 'Push built image to Docker Hub'
-              run: docker push ${{ secrets.DOCKER_HUB_USER }}/${{ env.DOCKER_HUB_REPOSITORY }}:latest
+              run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_HUB_REPOSITORY }}:latest
