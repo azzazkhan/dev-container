@@ -141,7 +141,7 @@ services:
 
         # PMA interface port
         ports:
-            - '${PMA_PORT:-4000}:80'
+            - '${PMA_PORT:-4080}:80'
 
         # Restart the container on failure and exit (unless manully terminated)        
         restart: unless-stopped
