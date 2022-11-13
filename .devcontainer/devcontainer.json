@@ -1,18 +1,22 @@
 {
     "name": "Custom dev container",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "dev-container",
+    "runServices": [
+        "dev-container",
+        "database",
+        "redis",
+        "soketi",
+        "phpmyadmin",
+        "mailhog"
+    ],
+    "workspaceFolder": "/workspaces",
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:1": {},
         "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers/features/git-lfs:1": {},
         "ghcr.io/devcontainers/features/github-cli:1": {},
-        "ghcr.io/devcontainers/features/node:1": {},
-        "ghcr.io/devcontainers/features/php:1": {},
-        "ghcr.io/devcontainers/features/python:1": {},
-        "ghcr.io/devcontainers/features/sshd:1": {},
-        "ghcr.io/dhoeric/features/google-cloud-cli:1": {}
+        "ghcr.io/devcontainers/features/sshd:1": {}
     },
     "forwardPorts": [
         80,
@@ -136,7 +140,7 @@
         "storage": "20gb"
     },
     "containerEnv": {
-        // "FOO": "bar",
+        "GIT_EDITOR": "code --wait"
         // "PATH": "${removeEnv:PATH}"
     },
     "customizations": {
