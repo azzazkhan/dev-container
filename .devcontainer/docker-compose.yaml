@@ -14,7 +14,7 @@ services:
 
         # Mount repository into dev container
         volumes:
-            - ../..:/workspaces:cached
+            - ../:/workspaces:cached
 
         # Publish all ports on which our app will live
         ports:
