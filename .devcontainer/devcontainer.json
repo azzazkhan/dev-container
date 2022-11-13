@@ -136,11 +136,11 @@
     },
     "hostRequirements": {
         "cpus": 2,
-        "memory": "4gb",
-        "storage": "20gb"
+        "memory": "4gb"
     },
     "containerEnv": {
-        "GIT_EDITOR": "code --wait"
+        "GIT_EDITOR": "code --wait",
+        "SHELL": "/usr/bin/zsh"
         // "PATH": "${removeEnv:PATH}"
     },
     "customizations": {
@@ -167,6 +167,7 @@
                 "eamodio.gitlens",
                 "GraphQL.vscode-graphql",
                 "wix.vscode-import-cost",
+                "GraphQL.vscode-graphql-execution",
                 "VisualStudioExptTeam.vscodeintellicode",
                 "VisualStudioExptTeam.intellicode-api-usage-examples",
                 "ms-python.isort",
